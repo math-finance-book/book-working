@@ -1,0 +1,160 @@
+project:
+  type: book
+  output-dir: docs
+
+
+
+filters:
+  - custom-callout
+  # - black-formatter
+
+custom-callout:
+
+  InProgress:
+    title: "In Progress"
+    #color: "#eaacf2, 75387d]
+    color: "#eaacf2"
+    appearance: "default"
+    collapse: true
+  WritingToDo:
+    title: "Writing To Do"
+    color: "#a7f2d8"
+    appearance: "default"
+    collapse: true
+  CodeToDo:
+    title: "Code/Plots To Do"
+    #color: "#a7f2d8, 50997f]
+    color: "#eb4034"
+    appearance: "default"
+    collapse: true
+  
+  Example:
+    title: "Example"
+    color: "#e8cc97"
+    appearance: "default"
+    collapse: true
+  Done:
+    title: "Done"
+    color: "#e8cc97"  
+    appearance: "default"
+    collapse: true
+  Exercise:
+    color: "#ede29d"
+    appearance: "default"
+    collapse: true
+  Rule:
+    title: "Calculation Rule"
+    color: "#a1bced"
+    appearance: "default"
+    collapse: false
+  Principle:
+    title: "Key Principle"
+    color: "#e3aab2"
+    appearance: "default"
+    collapse: false
+  Extra:
+    title: "Theory Extra"
+    color: "#d5deed"
+    appearance: "default"
+    collapse: true
+ 
+number-depth: 2
+callout-icon: false
+bibliography: references.bib
+
+book:
+  title: "Pricing and Hedging Derivative Securities: Theory and Methods"
+  author: 
+    - Kerry Back
+    - Hong Liu
+    - Mark Loewenstein
+  reader-mode: true 
+  repo-url: "https://github.com/math-finance-book/book-code.git"
+  repo-actions: [source]
+  chapters:
+    - index.qmd
+    - part: "Part I: Introduction"
+      chapters:
+        - Chapter_Options.qmd
+        - Chapter_Futures.qmd
+          
+    - part: "Part II: Mathematical Tools"
+      chapters:
+        - Chapter_Intro_Binomial_Tree.qmd 
+        - Chapter_Brownian.qmd 
+        - Chapter_Ito.qmd
+        - Chapter_GBM.qmd
+
+    - part: "Part III: Arbitrage Pricing"
+      chapters:
+        - Chapter_Arbitrage.qmd
+        - Chapter_Deltas.qmd
+        - Chapter_DigitalsMeasures.qmd
+       
+    - part: "Part IV: Black-Scholes and Extensions"
+      chapters:
+        - Chapter_BlackScholes.qmd
+        - Chapter_Americans.qmd
+        - Chapter_FX.qmd
+        - Chapter_Merton.qmd
+        - Chapter_Asians.qmd
+        - Chapter_Exotics.qmd
+    - part: "Part V: Alternative Models"
+      chapters:
+        - Chapter_GARCH.qmd
+        - Chapter_StochasticVol.qmd
+        - Chapter_Jumps.qmd
+        - Chapter_VarianceSwaps.qmd
+    - part: "Part VI: Numerical Methods"
+      chapters:
+        - Chapter_MonteCarlo.qmd
+        - Chapter_Binomial.qmd
+        - Chapter_PDEs.qmd
+        - Chapter_Fourier.qmd
+        - Chapter_MachineLearning.qmd
+    - part: "Part VII: Fixed Income"
+      chapters:
+        - Chapter_FixedIncome.qmd
+        - Chapter_FixedIncomeDerivatives.qmd
+        - Chapter_Vasicek.qmd
+        - Chapter_Survey.qmd
+    - part: "Appendix"
+      chapters:
+        - AppendixA.qmd
+    
+format:
+  html:
+    fig-height: 3
+    html-math-method: 
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    freeze: auto
+    footnotes-hover: true
+    number-sections: true
+    theme: 
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    toc: false
+    toc-depth: 2
+    toc-title: Chapter contents
+    code-fold: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    execute:
+      freeze: auto
+    
+
+ 
+
+
+#pdf: default
+
+
+
+execute:
+  freeze: auto
+
+fig-cap-location: top
+
+comments:
+  hypothesis: true
